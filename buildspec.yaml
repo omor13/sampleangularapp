@@ -2,8 +2,6 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      docker: 20 # Specify the Docker version
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/k5u0o7b3
